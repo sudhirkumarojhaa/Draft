@@ -54,8 +54,20 @@
   </section>
 
   <section class="contact container">
-    <div class="imgBox">
-     <img src="http://graphichive.net/uploaded/fordesigner/1313339642.jpg" alt="">
+    <div class="row">
+      <div class="col s12 m6">
+        <input type="text" placeholder="Name" id="name">
+        <input type="text" placeholder="Comments" id="comment">
+        <br>
+        <br>
+        <input type="submit" placeholder="Submit" class="btn" onclick="submit()">
+      </div>
+      <div class="col s12 m6">
+        <div class="potBox">
+          <img src="./img/pot.png" alt="" class="potImg">
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -66,6 +78,30 @@
       © 2018 All rights reserved
     </div>
   </footer>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+     // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCynFQ3xmTlQ9F0tmLupOtMR7zQSJrXUbc",
+      authDomain: "blog-e21b9.firebaseapp.com",
+      databaseURL: "https://blog-e21b9.firebaseio.com",
+      projectId: "blog-e21b9",
+      storageBucket: "blog-e21b9.appspot.com",
+      messagingSenderId: "436674294797"
+    };
+     firebase.initializeApp(config);
+      var database = firebase.database();
+
+      function submit(name, comment) {
+        firebase.database().ref('').push({
+          name: name,
+          comment: comment
+        });
+      }
+
+  document.getElementById("form_id").submit();// Form submission
+   </script>
+
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
