@@ -18,18 +18,20 @@ img {
 }
 
 .menu {
-    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.logo {
-    text-align: center;
+.brand {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.tagline {
-    text-align: center;
-    margin-bottom: 30px;
-    font-family: Michroma;
+.date {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    font-weight: 900;
 }
 
 .overlay {
@@ -81,13 +83,8 @@ img {
     color: burlywood;
 }
 
-.menu-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #D8C3A5;
-    font-size: 24px;
-    margin-top: 3%;
+.card-title {
+    font-size: 18px !important;
 }
 
 .social {
@@ -125,15 +122,14 @@ img {
 }
 
 .footer-copyright {
-    position: fixed;
-    background-color: #eae7dc;
-    bottom: 0;
-    left: 0;
+    background-color: #000;
     width: 100%;
     margin: 0;
     margin-top: 4%;
-    padding: 10px 0;
-    color: #000;
+    padding: 10px 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
 }
 
 .imgBox {
@@ -156,7 +152,7 @@ fieldset {
 }
 
 .about h5 {
-    font-family: Michroma;
+    font-family: Mukta;
 }
 
 .about-content {
