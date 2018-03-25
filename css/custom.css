@@ -5,7 +5,6 @@ body {
 
 * {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 img {
@@ -39,8 +38,9 @@ img {
     z-index: 1;
     top: 0;
     left: -20px;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.93);
+    /* background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.93); */
+    background-color: beige;
     overflow-x: hidden;
     transition: 0.6s;
     margin-right: 20px;
@@ -64,9 +64,9 @@ img {
     padding: 8px;
     text-decoration: none;
     font-size: 26px;
-    color: #818181;
+    color: #000;
     display: inline-block;
-    transition: 0.7s;
+    transition: 0.3s;
 }
 
 .overlay .closebtn {
@@ -77,7 +77,7 @@ img {
 }
 
 .overlay a:hover {
-    color: #fff;
+    color: burlywood;
 }
 
 .menu-btn {
@@ -112,6 +112,13 @@ img {
     text-align: center;
 }
 
+.line {
+    width: 100px;
+    height: 5px;
+    background-color: orangered;
+    margin: 0 auto;
+}
+
 .page-content {
     line-height: 1.7;
 }
@@ -123,6 +130,7 @@ img {
     left: 0;
     width: 100%;
     margin: 0;
+    margin-top: 4%;
     padding: 10px 0;
     color: #000;
 }
@@ -144,4 +152,20 @@ img {
 
 fieldset {
     border: 2px solid #000;
+}
+
+/* .about {
+    background-image: url('../img/bg.jpg');
+} */
+
+.about-content{
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.quotes {
+    text-align: center;
+    font-family: 'Satisfy';
+    padding: 20px;
 }
