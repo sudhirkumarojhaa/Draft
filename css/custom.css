@@ -29,6 +29,7 @@ img {
 .tagline {
     text-align: center;
     margin-bottom: 30px;
+    font-family: Michroma;
 }
 
 .overlay {
@@ -154,11 +155,11 @@ fieldset {
     border: 2px solid #000;
 }
 
-/* .about {
-    background-image: url('../img/bg.jpg');
-} */
+.about h5 {
+    font-family: Michroma;
+}
 
-.about-content{
+.about-content {
     background: white;
     padding: 20px;
     margin: 20px auto;
