@@ -1,3 +1,5 @@
+/* global css */
+
 body {
     color: #000;
     font-family: 'Roboto', sans-serif;
@@ -13,18 +15,29 @@ img {
     object-fit: cover;
 }
 
-.contact {
-    margin-top: 5%;
-}
+
+/* HOME PAGE CSS */
 
 .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 20px;
+    padding: 20px 0;
 }
 
-.brand {
+.logo {
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    margin: 5px;
+    color: #000;
+}
+
+.tagline {
+    font-family: 'Handlee', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
 }
 
 .date {
@@ -32,6 +45,63 @@ img {
     justify-content: space-between;
     padding-bottom: 10px;
     font-weight: 900;
+    font-size: 14px;
+}
+
+.banner {
+    background-image: url('http://media.nomadicmatt.com/siteimages/home/signup_bkg.jpg');
+    height: 45vh;
+    position: relative;
+}
+
+.banner-footer {
+    background-image: url('http://media.nomadicmatt.com/siteimages/home/signup_bkg.jpg');
+    height: 45vh;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.insta-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    padding: 20px 80px;
+    font-size: 30px;
+    border: 1px solid #b71212;
+    font-weight: 100;
+    color: #000;
+}
+
+.contact-icons li:hover{
+    background: beige;
+    color: #fff;
+}
+
+.insta-content:hover {
+    background: black;
+    color: #fff;
+    transition: all .2s;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6e2dd;
 }
 
 .overlay {
@@ -83,86 +153,134 @@ img {
     color: burlywood;
 }
 
+
+/* INNER PAGE CSS */
+
+.about {
+    position: relative;
+}
+
+.about p,
+.about li {
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.profile-img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+    border: 5px solid #fff;
+}
+
+.main-title {
+    font-size: 26px;
+}
+
 .card-title {
     font-size: 18px !important;
 }
 
-.social {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.brand-name {
-    color: #000;
-    text-decoration: none;
-}
-
 .blog-page {
-    min-height: 75vh;
+    min-height: 85vh;
     background-color: #fff;
     background-image: linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.6em;
     padding: 30px;
 }
 
-.page-title {
-    text-align: center;
+.blog-date {
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
 }
 
-.line {
-    width: 100px;
-    height: 5px;
-    background-color: orangered;
-    margin: 0 auto;
+.page-title {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
 }
 
 .page-content {
     line-height: 1.7;
 }
 
+.potBox {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.contact-details {
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.contact-icons li {
+    width: 50px;
+    padding: 5px;
+    border: 3px solid beige;
+    border-radius: 5px;
+}
+
+.contact-icons a {
+    color: teal;
+}
+
+
+/* FOOTER CSS */
+
 .footer-copyright {
     background-color: #000;
     width: 100%;
     margin: 0;
-    margin-top: 4%;
     padding: 10px 40px;
     color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
-.imgBox {
-    width: 30%;
-    height: 70%;
-}
 
-.potBox {
-    display: flex;
-    justify-content: center;
-}
+/* MEDIAQUERY CSS */
 
-.potImg {
-    width: 300px;
-    height: 300px;
-}
-
-fieldset {
-    border: 2px solid #000;
-}
-
-.about h5 {
-    font-family: Mukta;
-}
-
-.about-content {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-}
-
-.quotes {
-    text-align: center;
-    font-family: 'Satisfy';
-    padding: 20px;
+@media screen and (max-width: 768px) {
+    .banner-content {
+        font-size: 14px;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    .insta-content {
+        font-size: 20px;
+        padding: 5px;
+    }
+    .blog-date {
+        font-size: 10px;
+        font-weight: 300;
+        padding: 5px;
+    }
+    .footer-copyright {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

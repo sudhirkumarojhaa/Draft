@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sudhir Kumar</title>
   <link rel="shortcut icon" type="image/x-icon" href="./img/fav.ico">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Mukta" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Handlee" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/materialize.min.css">
@@ -16,19 +16,14 @@
 
 <body>
   <section class="menu">
-    <h4 class="logo">sudhir kumar </h4>
-    <h6 class="tagline"> In here, is where I feel Free</h6>
-
-
-    <div class="menu-btn container">
-      <div class="bar" onclick="openNav()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="social">
-        <i class="fas fa-envelope"></i>
-        <i class="fab fa-facebook-f"></i>
-        <i class="far fa-address-card"></i>
-      </div>
+    <div class="brand">
+      <a href="./index.html">
+        <h4 class="logo">sudhir kumar </h4>
+      </a>
+      <h6 class="tagline"> In here, is where I feel Free</h6>
+    </div>
+    <div class="bar" onclick="openNav()">
+      <i class="fas fa-bars"></i>
     </div>
     <div id="myNav" class="overlay" style="width: 0%;">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -52,10 +47,45 @@
       </div>
     </div>
   </section>
-
+  <!-- header section ends here -->
+  <section class="banner">
+    <p class="banner-content">
+      <span>"</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni repudiandae voluptatibus dolores et ipsum dolor minus
+      maxime distinctio minima officia soluta porro nulla modi, ab commodi fugit id ratione.
+      <span>"</span>
+    </p>
+  </section>
+  <!-- banner section ends here -->
   <section class="contact container">
+    <!-- <h4 class="section-title">Contact</h4> -->
+    <div class="contact-details">
+      <h5>Sudhir Kumar Ojha</h5>
+      <div class="address">
+        Shivalik Nagar, Haridwar (249403) India
+      </div>
+      <ul class="contact-icons">
+        <li>
+          <a href="">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="far fa-envelope"></i>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-map-marker"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <div class="row">
       <div class="col s12 m6">
+        <h4>Contact me at:</h4>
         <input type="text" placeholder="Name" id="name">
         <input type="text" placeholder="Comments" id="comment">
         <br>
@@ -71,16 +101,24 @@
     </div>
   </section>
 
+  <!-- contact content ends here -->
+  <section class="banner-footer">
+    <a href="https://www.instagram.com/navigatorkumar/" class="insta-content"> follow me on instagram</a>
+  </section>
+
 
 
   <footer class="footer-copyright">
-    <div class="container">
-      © 2018 All rights reserved
-    </div>
+    <a href="">
+      <p>
+        <i class="far fa-envelope"></i> sudhirkumarojhaa@gmail.com</p>
+    </a>
+    <p>© sudhirkumar 2018 All rights reserved</p>
   </footer>
+  <!-- footer section ends here -->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script>
-     // Initialize Firebase
+    // Initialize Firebase
     var config = {
       apiKey: "AIzaSyCynFQ3xmTlQ9F0tmLupOtMR7zQSJrXUbc",
       authDomain: "blog-e21b9.firebaseapp.com",
@@ -89,18 +127,18 @@
       storageBucket: "blog-e21b9.appspot.com",
       messagingSenderId: "436674294797"
     };
-     firebase.initializeApp(config);
-      var database = firebase.database();
+    firebase.initializeApp(config);
+    var database = firebase.database();
 
-      function submit(name, comment) {
-        firebase.database().ref('').push({
-          name: name,
-          comment: comment
-        });
-      }
+    function submit(name, comment) {
+      firebase.database().ref('').push({
+        name: name,
+        comment: comment
+      });
+    }
 
-  document.getElementById("form_id").submit();// Form submission
-   </script>
+    document.getElementById("form_id").submit(); // Form submission
+  </script>
 
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
