@@ -15,7 +15,6 @@ img {
     object-fit: cover;
 }
 
-
 /* HOME PAGE CSS */
 
 .menu {
@@ -85,11 +84,6 @@ img {
     color: #000;
 }
 
-.contact-icons li:hover{
-    background: beige;
-    color: #fff;
-}
-
 .insta-content:hover {
     background: black;
     color: #fff;
@@ -153,17 +147,22 @@ img {
     color: burlywood;
 }
 
-
 /* INNER PAGE CSS */
 
 .about {
     position: relative;
 }
 
-.about p,
+.about p {
+    font-weight: 100;
+    font-size: 18px;
+}
+
 .about li {
     font-weight: 100;
     font-size: 18px;
+    margin-left: 40px;
+    list-style-type: square !important;
 }
 
 .profile-img {
@@ -239,14 +238,29 @@ img {
 .contact-icons li {
     width: 50px;
     padding: 5px;
-    border: 3px solid beige;
-    border-radius: 5px;
+    border: 1px solid beige;
+    border-radius: 2px;
+    background-color: black;
 }
 
 .contact-icons a {
-    color: teal;
+    color: #fff;
 }
 
+.contact-icons li:hover {
+    transform: scale(1.3);
+}
+
+.btn {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn:hover {
+    background: black;
+    color: #fff;
+}
 
 /* FOOTER CSS */
 
@@ -259,7 +273,6 @@ img {
     display: flex;
     justify-content: space-between;
 }
-
 
 /* MEDIAQUERY CSS */
 

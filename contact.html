@@ -85,12 +85,18 @@
 
     <div class="row">
       <div class="col s12 m6">
-        <h4>Contact me at:</h4>
-        <input type="text" placeholder="Name" id="name">
-        <input type="text" placeholder="Comments" id="comment">
-        <br>
-        <br>
-        <input type="submit" placeholder="Submit" class="btn" onclick="submit()">
+       <form action="#" method="post" name="form_name" id="form_id" class="form_class">
+         <h4>Get in Touch</h4>
+         <label>Name :</label>
+         <input type="text" name="name" id="name" placeholder="Name" />
+         <label>Email :</label>
+         <input type="text" name="email" id="mail" placeholder="Valid Email" />
+         <label>Phone :</label>
+         <input type="text" name="phone" id="phone" placeholder="Valid phone" />
+         <label>Comment :</label>
+         <input type="text" name="comment" id="comment" placeholder="Comment" />
+         <a class="waves-effect waves-light btn" onclick="submit()">submit</a>
+       </form>
       </div>
       <div class="col s12 m6">
         <div class="potBox">
@@ -129,18 +135,20 @@
     };
     firebase.initializeApp(config);
     var database = firebase.database();
-
-    function submit(name, comment) {
-      firebase.database().ref('').push({
-        name: name,
-        comment: comment
-      });
-    }
-
-    document.getElementById("form_id").submit(); // Form submission
+    var names=document.getElementById('name');
+    var mail=document.getElementById('mail');
+    var comment=document.getElementById('comment');
+      var phone = document.getElementById('phone');
+   function submit() {
+    firebase.database().ref('Feedback').push({
+      names: names.value,
+      mail: mail.value,
+      comment: comment.value,
+      phone: phone.value
+    });
+   }
+    // document.getElementById("form_id").submit();// Form submission
   </script>
-
-
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
