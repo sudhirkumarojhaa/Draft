@@ -1,3 +1,3 @@
 # Blog
 
-https://sudhirkumarojhaa.github.io/Draft/
+https://sudhirkumarojhaa.github.io/Blog/
