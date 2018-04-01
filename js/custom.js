@@ -5,3 +5,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+
+
+ $(document).ready(function () {
+   $('.collapsible').collapsible();
+ });
+

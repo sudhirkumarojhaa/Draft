@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sudhir Kumar</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/fav.ico">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Handlee" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <section class="menu">
+    <div class="brand">
+      <a href="./index.html">
+        <h4 class="logo">sudhir kumar </h4>
+      </a>
+      <h6 class="tagline"> In here, is where I feel Free</h6>
+    </div>
+    <div class="bar" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div id="myNav" class="overlay" style="width: 0%;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="overlay-content">
+        <div class="menu-menu-1-container">
+          <ul class="overlay-content">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./bucketlist.html">Bucketlist</a>
+            </li>
+            <li>
+              <a href="./movie.html">Movies I like</a>
+            </li>
+            <li>
+              <a href="./post.html">Blog</a>
+            </li>
+            <li>
+              <a href="./about.html">About me</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- header section ends here -->
+  <section class="banner">
+    <img src="https://cdn.sunlife.com/static/ph/Life%20Goals/OG%20and%20Feature%20images/What%20should%20be%20in%20your%20Wealth%20and%20Health%20bucket%20list.jpg" alt="">
+    <p class="banner-content">
+      <span>"</span>
+       Goals that are not written down are just wishes.
+      <span>"</span>
+    </p>
+  </section>
+  <!-- banner section ends here -->
+
+  <section class="bucketlist container">
+  <div class="container">
+    <h4 class="section-title z-depth-5 blue">Bucket list</h4>
+  </div>
+    <ol class="blog-page">
+      <li>Rafting</li>
+      <li>Marathon</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </section>
+
+  <!-- contact content ends here -->
+  <section class="banner-footer">
+    <img src="./img/banner-footer.jpg" alt="">
+    <div class="insta-content">
+      <a class="waves-effect waves-light btn-large red darken-1 " href="https://www.instagram.com/navigatorkumar">
+        <i class="material-icons right">camera_alt</i>Follow me on instagram</a>
+    </div>
+  </section>
+
+
+
+  <footer class="footer-copyright">
+    <a href="">
+      <p>
+        <i class="far fa-envelope"></i> sudhirkumarojhaa@gmail.com</p>
+    </a>
+    <p>© sudhirkumar 2018 All rights reserved</p>
+  </footer>
+  <!-- footer section ends here -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCynFQ3xmTlQ9F0tmLupOtMR7zQSJrXUbc",
+      authDomain: "blog-e21b9.firebaseapp.com",
+      databaseURL: "https://blog-e21b9.firebaseio.com",
+      projectId: "blog-e21b9",
+      storageBucket: "blog-e21b9.appspot.com",
+      messagingSenderId: "436674294797"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var names = document.getElementById('name');
+    var mail = document.getElementById('mail');
+    var comment = document.getElementById('comment');
+    var phone = document.getElementById('phone');
+    function submit() {
+      firebase.database().ref('Feedback').push({
+        names: names.value,
+        mail: mail.value,
+        comment: comment.value,
+        phone: phone.value
+      });
+    }
+    // document.getElementById("form_id").submit();// Form submission
+  </script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

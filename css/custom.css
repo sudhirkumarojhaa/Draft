@@ -15,13 +15,13 @@ img {
     object-fit: cover;
 }
 
-
 /* HOME PAGE CSS */
 
 .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
     font-size: 20px;
     padding: 20px 0;
 }
@@ -49,25 +49,39 @@ img {
 }
 
 .banner {
-    background-image: url('http://media.nomadicmatt.com/siteimages/home/signup_bkg.jpg');
-    height: 45vh;
+    height: 85vh;
     position: relative;
 }
 
 .banner-footer {
-    background-image: url('http://media.nomadicmatt.com/siteimages/home/signup_bkg.jpg');
-    height: 45vh;
+    height: 65vh;
     position: relative;
+}
+
+.banner:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
 }
 
 .banner-content {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.2);
     transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 37px;
+    font-style: italic;
     text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
 }
 
 .insta-content {
@@ -76,26 +90,13 @@ img {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    text-transform: capitalize;
-    padding: 20px 80px;
-    font-size: 30px;
-    border: 1px solid #b71212;
-    font-weight: 100;
-    color: #000;
-}
-
-.insta-content:hover {
-    background: black;
-    color: #fff;
-    transition: all .2s;
 }
 
 .section-title {
     text-align: center;
     text-transform: capitalize;
     font-family: sans-serif;
-    padding-bottom: 10px;
+    padding: 20px;
     border-bottom: 2px solid #e6e2dd;
 }
 
@@ -106,15 +107,12 @@ img {
     z-index: 1;
     top: 0;
     left: -20px;
-    /* background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.93); */
-    background-color: beige;
+    background-image: url("../img/f.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     overflow-x: hidden;
     transition: 0.6s;
     margin-right: 20px;
-    border-right-width: 10px;
-    border-right-style: solid;
-    border-right-color: #fff;
 }
 
 .overlay-content {
@@ -145,9 +143,8 @@ img {
 }
 
 .overlay a:hover {
-    color: burlywood;
+    color: blue;
 }
-
 
 /* INNER PAGE CSS */
 
@@ -166,7 +163,6 @@ img {
     margin-left: 40px;
     list-style-type: square !important;
 }
-
 
 .main-title {
     font-size: 26px;
@@ -206,47 +202,25 @@ img {
     margin: 0 auto;
 }
 
-.contact-details {
-    text-align: center;
+.contact {
+    padding: 30px 0;
 }
 
-.contact-icons {
-    display: flex;
-    width: 200px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+.contact .btn {
     margin: 0 auto;
-    font-size: 24px;
+    display: block;
+    width: 300px;
 }
 
-.contact-icons li {
-    width: 50px;
-    padding: 5px;
-    border: 1px solid beige;
-    border-radius: 2px;
-    background-color: black;
+label {
+    font-size: 18px;
 }
 
-.contact-icons a {
-    color: #fff;
+.collapsible-header {
+    padding: 20px 0;
+    font-size: 20px;
+    color: brown;
 }
-
-.contact-icons li:hover {
-    transform: scale(1.3);
-}
-
-.btn {
-    background: #fff;
-    color: #000;
-    border: 2px solid #000;
-}
-
-.btn:hover {
-    background: black;
-    color: #fff;
-}
-
 
 /* FOOTER CSS */
 
@@ -259,7 +233,6 @@ img {
     display: flex;
     justify-content: space-between;
 }
-
 
 /* MEDIAQUERY CSS */
 
