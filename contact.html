@@ -55,7 +55,7 @@
   </section>
   <!-- header section ends here -->
   <section class="banner">
-     <img src="https://i.pinimg.com/originals/4d/e4/8d/4de48d353deaaae7f09cbc641702935b.jpg" alt="">
+     <img src="./img/contact.jpg" alt="">
     <p class="banner-content">
       <span>"</span>
      It's always a pleasure to be with others
@@ -100,32 +100,6 @@
   </footer>
   <!-- footer section ends here -->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCynFQ3xmTlQ9F0tmLupOtMR7zQSJrXUbc",
-      authDomain: "blog-e21b9.firebaseapp.com",
-      databaseURL: "https://blog-e21b9.firebaseio.com",
-      projectId: "blog-e21b9",
-      storageBucket: "blog-e21b9.appspot.com",
-      messagingSenderId: "436674294797"
-    };
-    firebase.initializeApp(config);
-    var database = firebase.database();
-    var names=document.getElementById('name');
-    var mail=document.getElementById('mail');
-    var comment=document.getElementById('comment');
-      var phone = document.getElementById('phone');
-   function submit() {
-    firebase.database().ref('Feedback').push({
-      names: names.value,
-      mail: mail.value,
-      comment: comment.value,
-      phone: phone.value
-    });
-   }
-    // document.getElementById("form_id").submit();// Form submission
-  </script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
