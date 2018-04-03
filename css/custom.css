@@ -21,14 +21,15 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url('../img/banner-footer.jpg');
     font-size: 20px;
     padding: 20px 0;
-    position: fixed;
+    background-color: transparent;
+}
+
+.home {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .logo {
@@ -58,15 +59,14 @@ img {
 }
 
 .banner {
-    height: 900px;
+    height: 700px;
     position: relative;
-    margin-top: 100px;
 }
 
 .banner-footer {
-    height: 65vh;
+    height: 400px;
     position: relative;
-    padding-top: 220px;
+    margin-top: 20px;
 }
 
 .banner:before {
@@ -85,7 +85,7 @@ img {
     left: 50%;
     width: 100%;
     padding: 20px 0;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
     font-size: 37px;
@@ -93,6 +93,13 @@ img {
     text-align: center;
     color: #fff;
     text-shadow: 2px 2px 2px black;
+}
+
+
+
+.home-grid .col {
+    height: 50vh;
+    padding: 4px 4px;
 }
 
 .insta-content {
@@ -187,7 +194,6 @@ img {
     background-image: linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.6em;
     padding: 30px;
-    margin-top: 300px;
 }
 
 .blog-date {
@@ -248,7 +254,7 @@ label {
 
 @media screen and (max-width: 768px) {
     .banner-content {
-        font-size: 14px;
+        font-size: 40px;
     }
     .section-title {
         font-size: 22px;
